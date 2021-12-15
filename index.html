@@ -2,15 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO APP</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO APP</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseApp = firebase.initializeApp({
+      apiKey: "AIzaSyACKS68f4zpvjiHDLJ5u4IXYCvV473TDww",
+      authDomain: "todoo-appp.firebaseapp.com",
+      projectId: "todoo-appp",
+      storageBucket: "todoo-appp.appspot.com",
+      messagingSenderId: "768313452887",
+      appId: "1:768313452887:web:b8b63274ef41d67e7bb612",
+      measurementId: "G-FSEQFF6C5Q"
+    });
+    const auth = firebaseApp.auth();
+  </script>
+
 </head>
 
 <body>
-    <div>
+  <div>
     <h1>ToDo App</h1>
     <input type="text" id="todo">
     <button onclick="getTodo()">Add ToDo</button>
@@ -23,7 +41,8 @@
 
   </div>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
+
 </body>
 
 </html>
